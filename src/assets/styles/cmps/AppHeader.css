@@ -14,6 +14,8 @@
     }
 
     .logo {
+        display: flex;
+        gap: 0.5rem;
         text-decoration: none;
         color: var(--text-dark);
         font-size: 1.5rem;

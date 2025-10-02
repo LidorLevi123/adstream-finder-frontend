@@ -5,6 +5,7 @@ export function AppHeader() {
 		<header className="app-header main-layout full">
 			<nav className="header-nav container">
 				<NavLink to="/" className="logo">
+					<img src="/img/favicon.png" alt="AdStream" className="logo-icon" />
 					<span className="logo-text">Ad<span className="highlight">Stream</span></span>
 				</NavLink>
 				

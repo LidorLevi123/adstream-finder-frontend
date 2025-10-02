@@ -21,10 +21,10 @@ ChartJS.register(
 export function StatsDisplay({ data }) {
   // Calculate counts for each category
   const counts = {
-    streamingAndAds: data.filter(item => item.hasStreaming === 'true' && item.hasAds === 'true').length,
-    streamingOnly: data.filter(item => item.hasStreaming === 'true' && item.hasAds === 'false').length,
-    adsOnly: data.filter(item => item.hasStreaming === 'false' && item.hasAds === 'true').length,
-    noCrawl: data.filter(item => item.hasStreaming === 'false' && item.hasAds === 'false').length
+    streamingAndAds: data.filter(item => item.hasStreaming && item.hasAds).length,
+    streamingOnly: data.filter(item => item.hasStreaming && !item.hasAds).length,
+    adsOnly: data.filter(item => !item.hasStreaming && item.hasAds).length,
+    noCrawl: data.filter(item => item.error).length
   }
 
   const chartData = {
@@ -45,7 +45,7 @@ export function StatsDisplay({ data }) {
           'rgba(255, 206, 86, 1)',
           'rgba(255, 99, 132, 1)'
         ],
-        borderWidth: 1
+        borderWidth: 3
       }
     ]
   }
@@ -91,8 +91,8 @@ export function StatsDisplay({ data }) {
             {data.map((item, index) => (
               <tr key={index}>
                 <td>{item.domain}</td>
-                <td>{item.hasStreaming === 'true' ? '✓' : '✗'}</td>
-                <td>{item.hasAds === 'true' ? '✓' : '✗'}</td>
+                <td>{item.hasStreaming ? '✓' : '✗'}</td>
+                <td>{item.hasAds ? '✓' : '✗'}</td>
               </tr>
             ))}
           </tbody>
