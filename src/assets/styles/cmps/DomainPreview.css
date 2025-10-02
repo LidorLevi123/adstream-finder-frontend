@@ -1,0 +1,39 @@
+.domain-preview {
+    th,
+    td {
+        text-align: left;
+        border-bottom: 1px solid var(--border-light);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        padding: 0.5rem;
+        max-width: 120px;
+
+        &.green {
+            color: var(--success);
+        }
+
+        &.red {
+            color: var(--danger);
+        }
+
+        &.green,
+        &.red {
+            font-weight: 600;
+        }
+    }
+
+    th {
+        background: var(--bg-light);
+        font-weight: 600;
+        color: var(--text-heading);
+    }
+
+    td {
+        color: var(--text-body);
+    }
+
+    &:hover {
+        background: var(--bg-light);
+    }
+}
