@@ -23,4 +23,30 @@
             padding: 1rem;
         }
     }
+
+    .docs-page {
+        .docs-container {
+            padding: 3rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .docs-section {
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            h3 {
+                font-size: 1.4rem;
+            }
+        }
+
+        .docs-legend {
+            ul {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            }
+        }
+    }
 }
