@@ -1,17 +1,24 @@
 :root {
-  --clr1: #ce2e6c;
-  --clr2: #4f3a65;
-  --clr3: #574f7d;
-  --clr4: #95adbe;
-  --clr5: #dff0ea;
+  /* Brand Colors */
+  --primary: #4361ee;
+  --primary-gradient-start: #4299e1;
+  --primary-gradient-end: #667eea;
 
-  --clr1-light: color-mix(in lab, var(--clr1), white 15%);
+  /* Text Colors */
+  --text-dark: #2d3748;
+  --text-body: #495057;
+  --text-muted: #666;
+  --text-heading: #343a40;
 
-  --gray1: #ddd;
-  --gray2: #aaa;
-  --gray3: #777;
-  --gray4: #333;
-
-  --success: rgb(41, 189, 73);
-  --error: rgb(216, 59, 59);
+  /* Background Colors */
+  --bg-white: #fff;
+  --bg-light: #f8f9fa;
+  
+  /* Border Colors */
+  --border-light: #e9ecef;
+  
+  /* Overlay Colors */
+  --overlay-white: rgba(255, 255, 255, 0.95);
+  --overlay-white-light: rgba(255, 255, 255, 0.9);
+  --overlay-shadow: rgba(0, 0, 0, 0.1);
 }

@@ -2,14 +2,14 @@
   display: grid;
   gap: 2rem;
   padding: 2rem;
-  background: #fff;
+  background: var(--bg-white);
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--overlay-shadow);
   
   .chart-container {
     width: 100%;
     padding: 1rem;
-    background: #f8f9fa;
+    background: var(--bg-light);
     border-radius: 8px;
   }
   
@@ -17,27 +17,27 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 1rem;
-    background: #fff;
+    background: var(--bg-white);
   }
   
   th, td {
     padding: 1rem;
     text-align: left;
-    border-bottom: 1px solid #e9ecef;
+    border-bottom: 1px solid var(--border-light);
   }
   
   th {
-    background: #f8f9fa;
+    background: var(--bg-light);
     font-weight: 600;
-    color: #343a40;
+    color: var(--text-heading);
   }
   
   tr:hover {
-    background: #f8f9fa;
+    background: var(--bg-light);
   }
   
   td {
-    color: #495057;
+    color: var(--text-body);
   }
 }
 
