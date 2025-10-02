@@ -12,6 +12,7 @@
 @import "cmps/AppHeader";
 @import "cmps/StatsDisplay";
 @import "cmps/DomainList";
+@import "cmps/DomainPreview";
 @import "cmps/Tooltip";
 
 /* PAGES */

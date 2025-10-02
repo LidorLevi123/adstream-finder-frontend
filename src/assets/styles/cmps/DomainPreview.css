@@ -1,6 +1,5 @@
 .domain-preview {
-    th,
-    td {
+    td,th {
         text-align: left;
         border-bottom: 1px solid var(--border-light);
         overflow: hidden;
@@ -21,12 +20,6 @@
         &.red {
             font-weight: 600;
         }
-    }
-
-    th {
-        background: var(--bg-light);
-        font-weight: 600;
-        color: var(--text-heading);
     }
 
     td {
