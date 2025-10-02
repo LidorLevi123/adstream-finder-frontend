@@ -1,4 +1,5 @@
 import { Bar } from 'react-chartjs-2'
+import { Tooltip as TooltipCmp } from './Tooltip'
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -31,7 +32,7 @@ export function StatsDisplay({ data }) {
     labels: ['Streaming & Ads', 'Streaming Only', 'Ads Only', 'Could Not Crawl'],
     datasets: [
       {
-        label: 'Number of Domains',
+        label: `Number of Domains (${data.length})`,
         data: [counts.streamingAndAds, counts.streamingOnly, counts.adsOnly, counts.noCrawl],
         backgroundColor: [
           'rgba(75, 192, 192, 0.8)',
@@ -90,7 +91,15 @@ export function StatsDisplay({ data }) {
           <tbody>
             {data.map((item, index) => (
               <tr key={index}>
-                <td>{item.domain}</td>
+                <td className={item.error ? 'red' : ''}>
+                  {item.error ? (
+                    <TooltipCmp content={item.error} position="right">
+                      <span>{item.domain} 🔴</span>
+                    </TooltipCmp>
+                  ) : (
+                    item.domain
+                  )}
+                </td>
                 <td className={item.hasStreaming ? 'green' : 'red'}>{item.hasStreaming ? '✓' : '✗'}</td>
                 <td className={item.hasAds ? 'green' : 'red'}>{item.hasAds ? '✓' : '✗'}</td>
               </tr>
