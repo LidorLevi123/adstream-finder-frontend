@@ -25,6 +25,10 @@
         margin-bottom: 2rem;
         padding-bottom: 2rem;
         border-bottom: 1px solid var(--border-light);
+
+        .csv-link {
+            color: var(--primary);
+        }
     }
 
     .docs-legend {
