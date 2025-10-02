@@ -7,7 +7,7 @@ import { AppHeader } from './cmps/AppHeader'
 
 export function RootCmp() {
     return (
-        <div className="main-container">
+        <div className="main-layout">
             <AppHeader />
 
             <main>
