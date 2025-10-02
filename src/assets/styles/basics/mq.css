@@ -1,0 +1,26 @@
+@media (min-width: 600px) {
+    .main-layout {
+        grid-template-columns: 
+            minmax(20px, 1fr)
+            minmax(auto, 980px)
+            minmax(20px, 1fr);
+    }
+
+    .home .home-content {
+        padding: 2rem;
+    }
+
+    .stats-display {
+        padding: 2rem;
+
+        table {
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        th, td {
+            max-width: 200px;
+            padding: 1rem;
+        }
+    }
+}

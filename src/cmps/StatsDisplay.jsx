@@ -76,7 +76,7 @@ export function StatsDisplay({ data }) {
       <div className="chart-container">
         <Bar data={chartData} options={chartOptions} />
       </div>
-      
+
       <h1 className="table-title">Top 20 Domains</h1>
       <div className="table-container">
         <table>

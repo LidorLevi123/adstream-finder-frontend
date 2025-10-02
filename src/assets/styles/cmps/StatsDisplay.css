@@ -1,7 +1,6 @@
 .stats-display {
   display: grid;
   gap: 2rem;
-  padding: 2rem;
   background: var(--bg-white);
   border-radius: 12px;
   box-shadow: 0 4px 6px var(--overlay-shadow);
@@ -16,14 +15,18 @@
   table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
     background: var(--bg-white);
+    font-size: 0.8rem;
   }
   
   th, td {
-    padding: 1rem;
     text-align: left;
     border-bottom: 1px solid var(--border-light);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    padding: 0.5rem;
+    max-width: 120px;
   }
   
   th {
