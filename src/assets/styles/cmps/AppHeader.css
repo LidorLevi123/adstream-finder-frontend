@@ -2,9 +2,23 @@
     position: sticky;
     top: 0;
     background: var(--overlay-white);
-    backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--overlay-shadow);
     z-index: 1;
+    transition: 0.4s;
+
+    &.dark {
+        background: var(--text-dark);
+        color: var(--text-white);
+        border-bottom: 1px solid var(--overlay-shadow);
+
+        .logo {
+            color: var(--overlay-white);
+        }
+
+        .nav-links a {
+            color: var(--overlay-white);
+        }
+    }
 
     .header-nav {
         display: flex;

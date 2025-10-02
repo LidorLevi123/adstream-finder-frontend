@@ -10,8 +10,8 @@ export function RootCmp() {
     return (
         <div className="main-layout">
             <AppHeader />
-
             <main>
+                <div className="header-intersection"></div>
                 <Routes>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/docs" element={<DocsPage />} />
