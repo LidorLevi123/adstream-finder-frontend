@@ -22,4 +22,10 @@
   --overlay-white: rgba(255, 255, 255, 0.95);
   --overlay-white-light: rgba(255, 255, 255, 0.9);
   --overlay-shadow: rgba(0, 0, 0, 0.1);
+
+  /* Success Colors */
+  --success: #1fcd7c;
+
+  /* Danger Colors */
+  --danger: #dc3545;
 }

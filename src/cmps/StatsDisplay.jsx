@@ -91,8 +91,8 @@ export function StatsDisplay({ data }) {
             {data.map((item, index) => (
               <tr key={index}>
                 <td>{item.domain}</td>
-                <td>{item.hasStreaming ? '✓' : '✗'}</td>
-                <td>{item.hasAds ? '✓' : '✗'}</td>
+                <td className={item.hasStreaming ? 'green' : 'red'}>{item.hasStreaming ? '✓' : '✗'}</td>
+                <td className={item.hasAds ? 'green' : 'red'}>{item.hasAds ? '✓' : '✗'}</td>
               </tr>
             ))}
           </tbody>

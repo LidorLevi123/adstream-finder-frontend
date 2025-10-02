@@ -27,6 +27,18 @@
     white-space: normal;
     padding: 0.5rem;
     max-width: 120px;
+
+    &.green {
+      color: var(--success);
+    }
+
+    &.red {
+      color: var(--danger);
+    }
+
+    &.green, &.red {
+      font-weight: 600;
+    }
   }
   
   th {
