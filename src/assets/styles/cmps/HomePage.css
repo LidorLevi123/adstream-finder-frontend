@@ -1,3 +1,39 @@
 .home {
-    
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+    padding: 2rem;
+}
+
+.home h1 {
+    font-size: 2.5rem;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.home h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #4299e1 0%, #667eea 100%);
+    border-radius: 2px;
+}
+
+.home-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    padding: 2rem;
 }
