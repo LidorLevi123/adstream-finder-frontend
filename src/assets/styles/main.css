@@ -11,6 +11,7 @@
 /* CMPS */
 @import "cmps/AppHeader";
 @import "cmps/StatsDisplay";
+@import "cmps/DomainList";
 @import "cmps/Tooltip";
 
 /* PAGES */

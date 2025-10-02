@@ -1,29 +1,71 @@
-.home h1 {
-    font-size: 2.5rem;
-    color: var(--text-dark);
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    position: relative;
-    padding-bottom: 1rem;
-}
+.home {
+    .home-content {
+        background: var(--overlay-white-light);
+        border-radius: 16px;
+        box-shadow: 0 8px 30px var(--overlay-shadow);
+        margin-block-end: 2rem;
+    }
 
-.home h1::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 4px;
-    background: linear-gradient(90deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
-    border-radius: 2px;
-}
+    .table-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-block: 2rem;
+      }
+    
+      .table-title {
+        color: var(--text-dark);
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0;
+      }
+    
+      .filter-buttons {
+        display: flex;
+        gap: 0.5rem;
+      }
+    
+      .filter-btn {
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--primary);
+        border-radius: 6px;
+        background: transparent;
+        color: var(--primary);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+    
+        &:hover {
+          background: rgba(67, 97, 238, 0.1);
+        }
+    
+        &.active {
+          background: var(--primary);
+          color: white;
+        }
+      }
 
-.home-content {
-    background: var(--overlay-white-light);
-    border-radius: 16px;
-    box-shadow: 0 8px 30px var(--overlay-shadow);
+      h1 {
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        text-align: center;
+        margin-bottom: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        position: relative;
+        padding-bottom: 1rem;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+            border-radius: 2px;
+        }
+    }
 }

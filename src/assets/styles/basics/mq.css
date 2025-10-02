@@ -12,15 +12,20 @@
 
     .stats-display {
         padding: 2rem;
+    }
 
+    .domain-list {
         table {
             margin-top: 1rem;
             font-size: 1rem;
         }
+    }
 
+    .domain-preview {
         th, td {
             max-width: 200px;
             padding: 1rem;
+            overflow: unset;
         }
     }
 

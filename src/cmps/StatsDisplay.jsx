@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { Bar } from 'react-chartjs-2'
 import { Tooltip as TooltipCmp } from './Tooltip'
 import {
@@ -20,6 +21,8 @@ ChartJS.register(
 )
 
 export function StatsDisplay({ data }) {
+  const [filterMode, setFilterMode] = useState('top')
+
   // Calculate counts for each category
   const counts = {
     streamingAndAds: data.filter(item => item.hasStreaming && item.hasAds).length,
@@ -76,36 +79,6 @@ export function StatsDisplay({ data }) {
     <div className="stats-display">
       <div className="chart-container">
         <Bar data={chartData} options={chartOptions} />
-      </div>
-
-      <h1 className="table-title">Top 20 Domains</h1>
-      <div className="table-container">
-        <table>
-          <thead>
-            <tr>
-              <th>Domain</th>
-              <th>Streaming</th>
-              <th>Ads</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((item, index) => (
-              <tr key={index}>
-                <td className={item.error ? 'red' : ''}>
-                  {item.error ? (
-                    <TooltipCmp content={item.error} position="right">
-                      <span>{item.domain} 🔴</span>
-                    </TooltipCmp>
-                  ) : (
-                    item.domain
-                  )}
-                </td>
-                <td className={item.hasStreaming ? 'green' : 'red'}>{item.hasStreaming ? '✓' : '✗'}</td>
-                <td className={item.hasAds ? 'green' : 'red'}>{item.hasAds ? '✓' : '✗'}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
       </div>
     </div>
   )
