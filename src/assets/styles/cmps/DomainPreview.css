@@ -1,18 +1,18 @@
 .domain-preview {
-    .name span {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
+    .name {
+        span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
     }
 
-    td,th {
+    td {
         text-align: left;
         border-bottom: 1px solid var(--border-light);
-        overflow: hidden;
         text-overflow: ellipsis;
         white-space: normal;
         padding: 0.5rem;
-        max-width: 120px;
 
         &.green {
             color: var(--success);

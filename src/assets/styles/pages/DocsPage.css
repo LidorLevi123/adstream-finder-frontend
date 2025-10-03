@@ -1,11 +1,10 @@
 .docs-page {
-    padding: 2rem 1rem;
     background: var(--bg-lightgray);
     min-height: 100vh;
 
     .docs-container {
         background: var(--bg-white);
-        padding: 2rem;
+        padding: 1rem;
         border-radius: 12px;
         box-shadow: 0 4px 6px var(--overlay-shadow);
     }

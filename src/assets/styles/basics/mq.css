@@ -6,8 +6,13 @@
             minmax(20px, 1fr);
     }
 
-    .home .home-content {
-        padding: 2rem;
+    .home {
+        .home-content {
+            padding: 2rem;
+        }
+        h1 {
+            font-size: 2.5rem;
+        }
     }
 
     .stats-display {
@@ -18,11 +23,15 @@
         table {
             margin-top: 1rem;
             font-size: 1rem;
+
+            th {
+                padding: 0.8rem;
+            }
         }
     }
 
     .domain-preview {
-        th, td {
+        td {
             max-width: 200px;
             padding: 1rem;
             overflow: unset;
@@ -30,6 +39,8 @@
     }
 
     .docs-page {
+        padding: 2rem 1rem;
+
         .docs-container {
             padding: 3rem;
         }
