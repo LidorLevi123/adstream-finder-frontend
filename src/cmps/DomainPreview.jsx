@@ -1,12 +1,13 @@
+import { GlowingCircle } from "./GlowingCircle"
 import { Tooltip } from "./Tooltip"
 
 export function DomainPreview({ domain }) {
     return (
         <tr className="domain-preview">
-            <td className={domain.error ? 'red' : ''}>
+            <td className={`name ${domain.error ? 'red' : ''}`}>
                 {domain.error ? (
                     <Tooltip content={domain.error} position="right">
-                        <span>{domain.domain} 🔴</span>
+                        <span>{domain.domain} <GlowingCircle /></span>
                     </Tooltip>
                 ) : (
                     domain.domain

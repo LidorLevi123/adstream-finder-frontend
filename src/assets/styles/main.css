@@ -14,6 +14,7 @@
 @import "cmps/DomainList";
 @import "cmps/DomainPreview";
 @import "cmps/Tooltip";
+@import "cmps/GlowingCircle";
 
 /* PAGES */
 @import "pages/HomePage";
