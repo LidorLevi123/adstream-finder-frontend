@@ -35,7 +35,7 @@
             display: none;
         }
 
-        &.dark .nav-links a {
+        &.dark .nav-links a:not(.active) {
             color: var(--overlay-white);
         }
 
