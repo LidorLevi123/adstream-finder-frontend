@@ -21,8 +21,6 @@ ChartJS.register(
 )
 
 export function StatsDisplay({ data }) {
-  const [filterMode, setFilterMode] = useState('top')
-
   // Calculate counts for each category
   const counts = {
     streamingAndAds: data.filter(item => item.hasStreaming && item.hasAds).length,
