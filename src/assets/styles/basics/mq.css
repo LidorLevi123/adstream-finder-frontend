@@ -75,6 +75,11 @@
         }
     }
 
+    .glowing-circle {
+        width: 8px;
+        height: 8px;
+    }
+
     .docs-page {
         padding: 2rem 1rem;
 
