@@ -32,8 +32,8 @@ export function AppHeader() {
 		<header ref={headerRef} className={headerClass}>
 			<nav className="header-nav container">
 				<NavLink to="/" className="logo">
-					<img src="/img/favicon.png" alt="AdStream" className="logo-icon" />
-					<span className="logo-text">Ad<span className="highlight">Stream</span></span>
+					<img src="/img/logo.png" alt="AdStream" className="logo-icon" />
+					<h3 className="logo-text">Ad<span className="highlight">Stream</span></h3>
 				</NavLink>
 
 				<div className="backdrop" onClick={() => setIsMenuOpen(false)}></div>

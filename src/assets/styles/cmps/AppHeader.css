@@ -31,12 +31,21 @@
 
     .logo {
         display: flex;
+        align-items: center;
         gap: 0.5rem;
         text-decoration: none;
         color: var(--text-dark);
         font-size: 1.5rem;
         font-weight: 700;
         transition: transform 0.2s ease;
+
+        img {
+            width: 30px;
+        }
+
+        h3 {
+            margin: 0;
+        }
     }
 
     .logo:hover {
