@@ -27,6 +27,16 @@ export function AppHeader() {
 		}
 	}, [])
 
+	function onOpenMenu() {
+		if (isMenuOpen) return
+		setIsMenuOpen(true)
+	}
+
+	function onCloseMenu() {
+		if (!isMenuOpen) return
+		setIsMenuOpen(false)
+	}
+
 	const headerClass =`app-header main-layout full ${isDark ? 'dark' : ''} ${isMenuOpen ? 'menu-open' : ''}`
 	return (
 		<header ref={headerRef} className={headerClass}>
@@ -36,13 +46,13 @@ export function AppHeader() {
 					<h3 className="logo-text">Ad<span className="highlight">Stream</span></h3>
 				</NavLink>
 
-				<div className="backdrop" onClick={() => setIsMenuOpen(false)}></div>
+				<div className="backdrop" onClick={onCloseMenu}></div>
 				<div className="nav-links">
-					<NavLink to="/">Home</NavLink>
-					<NavLink to="/docs">Docs</NavLink>
+					<NavLink to="/" onClick={onCloseMenu}>Home</NavLink>
+					<NavLink to="/docs" onClick={onCloseMenu}>Docs</NavLink>
 				</div>
 
-				<div className="burger" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+				<div className="burger" onClick={onOpenMenu}>
 					<span></span>
 					<span></span>
 					<span></span>
